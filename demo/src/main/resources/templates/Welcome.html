@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Vibefy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Montserrat', sans-serif;
+            animation: breathe 5s infinite alternate;
+            background: linear-gradient(45deg, #ff00a9, #8e44ad, #3498db, #2ecc71); /* Vibrant background colors */
+            background-size: 400% 400%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes breathe {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .pattern-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/45-degree-fabric-light.png');
+            opacity: 0.1;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 1;
+            color: #fff; /* Light color for text */
+        }
+
+        .logo {
+            font-size: 72px;
+            font-weight: bold;
+            color: transparent; /* Transparent text */
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ff00a9, #8e44ad, #3498db, #2ecc71); /* Vibrant background colors */
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: write 3s forwards;
+        }
+
+        @keyframes write {
+            to {
+                color: #fff; /* Light color for the text after writing effect completes */
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8); /* Added text-shadow for a glow effect */
+            }
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff; /* Light color for the button text */
+            background-color: #ff00a9; /* Vibrant background color for the button */
+            border-radius: 5px;
+            margin-top: 20px;
+            position: relative;
+            transition: color 0.3s, background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .button::after {
+            content: '→';
+            font-size: 24px;
+            margin-left: 10px;
+        }
+
+        .button:hover {
+            color: #ff00a9; /* Vibrant color on hover for the button text */
+            background-color: #fff; /* Light background color on hover for the button */
+        }
+    </style>
+</head>
+<body>
+<div class="pattern-overlay"></div>
+<div class="container">
+    <div class="logo">Vibefy</div>
+    <div>
+        <a href="#" class="button">Join the Party</a>
+    </div>
+</div>
+</body>
+</html>
